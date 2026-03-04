@@ -1,0 +1,4 @@
+53f613a853bc5734a9369d3210fc2ce13dbe9ee2b160adb4cab12f5bb5ef61ce  ./h•eart•h_Prometheus_Developers_2026-03-03.zip
+53f613a853bc5734a9369d3210fc2ce13dbe9ee2b160adb4cab12f5bb5ef61ce  ./h•eart•h_Prometheus_Sovereign_Syntropy_2026-03-03.zip
+6946644276c9cb504d1a87bb3f89fcc17c830b3085af8a871a0d2ed6692cc1b5  ./.gitattributes
+733180cd1b4babea3d0122e329a723588603f6da9cab8146165a9e3c11b97f6b  ./README.md
