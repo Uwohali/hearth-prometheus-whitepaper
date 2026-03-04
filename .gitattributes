@@ -1,0 +1,5 @@
+*.md text working-tree-encoding=utf-8
+*.asc text working-tree-encoding=utf-8
+*.json text working-tree-encoding=utf-8
+*.txt text working-tree-encoding=utf-8
+*.zip binary
