@@ -1,0 +1,48 @@
+{
+  "release_date": "2026-03-03",
+  "version": "1.0.0",
+  "files": {
+    "CAL-1.0_Syntropic_rider_license.md": "fb15817bc89f92c423a65bb4d1c24c2f5850fc909724f91d30398b11f6aa55db"
+,
+    "CAL-1.0_Syntropic_rider_license.md.asc": "2dce1a9dc2aa00d74bdc0602ea994da77be39f23ecbc9ceeeb84f2b28df67b66"
+,
+    "README.md": "384f7e2fb333a7103d056fa30e77e9dfe5e77cc99e779ca59c5e64556ac39634"
+,
+    "README.md.asc": "b08f5c82881c0f438a102af5e83c2c520a7e207b5ddb2a3ee2f1a33e1bab12fb"
+,
+    "RELEASE_MANIFEST.json": "90488743bac6fa8d9aa5d2ef06305b93de3cdc862068163a5be11cd252c43167"
+,
+    "RELEASE_MANIFEST.json.asc": "144ef65f98571366697f1a89664a969023de14321035561512149634836b9dbf"
+,
+    "Runbook.md": "97058918c5f755d49f2614d8b22fbc5b39443848d8385c6f32e86d06e842de63"
+,
+    "Runbook.md.asc": "7425b43381552416102a3ebb87feab236519e471c3a996813e696543b471cf9a"
+,
+    "SHA256_SUMS.txt": "ac409c168d8d568e52f648c204e369d63df0eee358aed3c79dec6ef3be026315"
+,
+    "SHA256_SUMS.txt.asc": "9d995ffa643d9b41319cb797febbab9d9d570d12c58a9936674e901b8b6a0b5d"
+,
+    "Syntropic_Sovereignty_Header.md": "ebf1afaf39975c50441cf0666d8102af144e205e8569db0d1cb9dbc5b482f164"
+,
+    "Syntropic_Sovereignty_Header.md.asc": "15c6d76cdcd6e19bd56bdf45c7d5a1ce81fbb5defcd0673052b04f32b1a5af38"
+,
+    "Technical_verification_&_cryptographic_integrity_manual.md": "2a3fba48d037e0f4f0ca5ccd9c9b20067159d729f0ea7e35cf909c94fd8bfde7"
+,
+    "Technical_verification_&_cryptographic_integrity_manual.md.asc": "33f5f1e070c19cb07e449d7fdb0897fe8651a3b74690b788393f9c5e32d799ed"
+,
+    "Uwohali_Tuccio_PUBLIC_KEY.asc": "51e0c9e88938c807af16c283321373dbf7c74c91073b4750b15929cd64152f9f"
+,
+    "VERIFICATION.md": "f8a23e696ab5bf438576ef12578abfe32ae94abb210b63e0832126ed83e2998c"
+,
+    "VERIFICATION.md.asc": "34d15543879216997174f8efbfe9bd6bbc33231bca1bfcebe3bdcc40eacbbe8d"
+,
+    "h•eart•h_Prometheus_White_Paper.md": "e772ce8757070672180961ec9fc51b55ef023768c0f90caae72e83193f435d05"
+,
+    "h•eart•h_Prometheus_White_Paper.md.asc": "edc8c214be3cb603ed4c737378033b98457680ddd794e4b795e94e250fa04def"
+,
+    "h•eart•h_intelligence_Manifesto.md": "034e058b968b37bfb7d1ad64bb7ea1ce9938202659fb61618bed648b5fc469e4"
+,
+    "h•eart•h_intelligence_Manifesto.md.asc": "d3737abe3ae7a5830357aba5b489ead04eeaeb2f81cda2a50838e2f0ccff3a6b"
+
+  }
+}
