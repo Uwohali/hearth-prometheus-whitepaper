@@ -137,6 +137,31 @@ This verification process is not bureaucracy. It is a ceremony of connection. By
 
 Work for Nature, and Nature will work for you.
 
+## 📢 A Call from the Future: Defend the Open Ground
+
+The technology we build does not exist in a vacuum. The very ground we stand on—the openness of platforms like Android—is under threat.
+
+Starting in **September 2026**, Google will require all developers to register centrally, pay fees, and submit government ID to distribute any app on Android devices. This is not about security. It is about **control**. It transforms an open ecosystem into a gatekept one, where a single corporation decides what software you can run, share, or build upon.
+
+### Why This Matters to h•eart•h Prometheus
+
+Our project is founded on **Agent Sovereignty** (Article I) and the **Spiral of Abundance** (Article IV). We believe in a world where you own your data, your identity, and your connections—not a corporation. The Android lock-down is the antithesis of everything we are building.
+
+If we accept this, we betray the very principles we encode into our zomes.
+
+### How You Can Help (Right Now)
+
+This is not just about writing code. It's about protecting the ecosystem our code runs on.
+
+*   **📱 As a User:** Install **[F-Droid](https://f-droid.org/)**, an open-source app store. The more people use open alternatives, the harder they are to ignore.
+*   **🗣️ As a Citizen:** Use your voice. The **[Keep Android Open](https://keepandroidopen.org)** campaign provides direct links to contact your regulators and representatives. Regulators need to hear from real people, not just corporations.
+*   **💻 As a Developer:** Refuse to enroll in Google's verification program. Spread the word in your communities. If you maintain a website, consider adding the KAO countdown banner to show your solidarity.
+
+The fight for open systems is the fight for a regenerative future. They are the same struggle.
+
+👉 **[Add the countdown banner to your site](https://keepandroidopen.org/#web-site-owners-show-your-support)** – it's a single `<script>` tag.
+
+---
 🧰 Prerequisites & Core Concepts
 Before contributing, ensure you understand these foundational white paper concepts:
 
