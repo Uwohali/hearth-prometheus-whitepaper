@@ -20,7 +20,6 @@ This repository contains the official release artifacts for the h•eart•h Pro
 | `RELEASE_MANIFEST.json` | Full manifest of all files and their hashes |
 | `RELEASE_MANIFEST.json.asc` | GPG signature of the manifest |
 | `Uwohali_Tuccio_PUBLIC_KEY.asc` | Public GPG key of the signer |
-| `h•eart•h_Prometheus_Sovereign_Syntropy_2026-03-05.zip` | Complete ZIP archive (Sovereign Syntropy package) |
 | `h•eart•h_Prometheus_Developers_2026-03-05.zip` | Identical ZIP archive (Developers package) |
 
 ## 👩‍💻 For Developers
