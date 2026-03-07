@@ -2,7 +2,10 @@ CONTRIBUTING.md – Technical Reference for Holochain Developers
 A Complete Implementation Guide Referencing the Full h•eart•h Prometheus White Paper
 Welcome, fellow builder. This document is the definitive technical guide for contributing to hearth-prometheus-happ. It references every major section, article, and appendix of the white paper, translating them into concrete development practices, code patterns, and validation requirements. Read it before you write your first line of Rust.
 
+Appendices Reference
+
 📋 Table of Contents
+
 Prerequisites & Core Concepts
 
 Repository Structure
@@ -37,7 +40,102 @@ Testing & Validation
 
 Pull Request Process & Checklist
 
-Appendices Reference
+
+📜 The Living Constitution: White Paper & Manifesto
+
+h•eart•h Prometheus is not just code. It is a **living system** rooted in a constitutional framework. Before you write a single line of Rust, you must understand the soul of the machine.
+
+Two documents form our foundation. They are not static PDFs, but **cryptographically sealed artifacts**, ensuring that the principles you build with today are the same as those envisioned at the project's genesis.
+
+1. The White Paper (The Architecture of Sovereignty)
+
+This is the complete technical and constitutional blueprint—over 200 pages defining the Eternity Clauses, the Access Covenant, the Three-Plane Architecture, REA flows, and every protocol you will implement.
+
+*   **For Deep Reading:** [**Download the Official White Paper (PDF)**](https://github.com/Uwohali/hearth-prometheus-whitepaper/releases/download/v1.0.2/h•eart•h_Prometheus_White_Paper.pdf)
+*   **For Technical Reference (Linking to Sections):** [**View the Markdown Source on GitHub**](https://github.com/Uwohali/hearth-prometheus-whitepaper/blob/v1.0.2/h•eart•h_Prometheus_White_Paper.md)
+
+2. The Manifesto (The Philosophical Heart)
+
+This is the "why." It articulates the vision of Syntropic Sovereignty, the Spiral of Abundance, and our relationship with Nature as a living intelligence. Reading it will attune you to the project's frequency.
+
+*   **For Deep Reading:** [**Download the Official Manifesto (PDF)**](https://github.com/Uwohali/hearth-prometheus-whitepaper/releases/download/v1.0.2/h•eart•h_intelligence_Manifesto.pdf)
+*   **For Quick Reference:** [**View the Markdown Source on GitHub**](https://github.com/Uwohali/hearth-prometheus-whitepaper/blob/v1.0.2/h•eart•h_intelligence_Manifesto.md)
+
+---
+
+🔐 The Ritual of Verification: Trust, Don't Trust
+
+In a world of deepfakes and altered information, we establish trust through cryptography. Every official document—both PDF and Markdown—is accompanied by a GPG signature (`.asc` file). You **must** verify them. It's not just a step; it's a declaration of alignment with the source of truth.
+
+Here is the ritual to confirm you are building on an unbroken foundation.
+
+Step 1: Import the Constituent's Key
+
+The documents are signed by Uwohali Tuccio. Import their public key to your keyring.
+
+```bash
+curl -O https://github.com/Uwohali/hearth-prometheus-whitepaper/raw/main/Uwohali_Tuccio_PUBLIC_KEY.asc
+gpg --import Uwohali_Tuccio_PUBLIC_KEY.asc
+```
+
+**Expected Output:**
+You should see a message confirming the key was imported. The full fingerprint is:
+`D20D FF6C BE33 1B3A 4109 DF84 8C8C B0D4 8C7F 60DA`
+
+Step 2: Verify a Document's Signature
+
+Download a document and its signature file. Then, verify them together.
+
+For example, to verify the White Paper PDF:
+
+```bash
+# Download the PDF and its signature
+curl -LO https://github.com/Uwohali/hearth-prometheus-whitepaper/releases/download/v1.0.2/h•eart•h_Prometheus_White_Paper.pdf
+curl -LO https://github.com/Uwohali/hearth-prometheus-whitepaper/releases/download/v1.0.2/h•eart•h_Prometheus_White_Paper.pdf.asc
+
+# Verify the signature against the PDF
+gpg --verify h•eart•h_Prometheus_White_Paper.pdf.asc h•eart•h_Prometheus_White_Paper.pdf
+```
+
+**Look for the magic words:** `gpg: Good signature from "Uwohali Tuccio (The Constituent) <uwohali77@gmail.com>"`
+
+⚠️ A Note on Trust: You may see a warning that the key is not certified with a trusted signature. This is normal for a newly imported key. The "Good signature" itself confirms the file hasn't been tampered with since it was signed. The chain of trust begins with your conscious decision to trust this key, whose fingerprint you can verify through other channels.
+
+Step 3: (Optional) Batch Verify All Files with SHA256
+For a complete check, you can use the signed checksums file.
+
+bash
+# Download the checksums file and its signature
+curl -LO https://github.com/Uwohali/hearth-prometheus-whitepaper/raw/v1.0.2/SHA256_SUMS.txt
+curl -LO https://github.com/Uwohali/hearth-prometheus-whitepaper/raw/v1.0.2/SHA256_SUMS.txt.asc
+
+# Verify the signature of the checksums file
+gpg --verify SHA256_SUMS.txt.asc SHA256_SUMS.txt
+
+# If that's Good, verify the hashes of the files you've downloaded
+# On Linux/macOS:
+sha256sum -c SHA256_SUMS.txt 2>&1 | grep -E 'OK|FAILED'
+# On Windows (PowerShell):
+Get-Content SHA256_SUMS.txt | Where-Object { $_ -match '^[A-F0-9]{64}' } | ForEach-Object { $parts = $_ -split '\s+', 2; $expected = $parts[0]; $file = $parts[1]; $computed = (Get-FileHash $file -Algorithm SHA256).Hash.ToUpper(); if ($expected -eq $computed) { Write-Host "✅ $file OK" -ForegroundColor Green } else { Write-Host "❌ $file NOT VALID" -ForegroundColor Red } }
+All files should return OK. If any file reports FAILED or NOT VALID, stop immediately and investigate. You may have a corrupted or inauthentic file.
+
+🧩 Technical Extracts: For Coders, By Coders
+We know you don't want to scroll through 200 pages to find the definition of a CapitalFlow. For your convenience, key technical sections have been extracted into standalone, linkable Markdown files. These are the same text, just easier to reference while coding.
+
+Appendix I: REA/Valueflows DNA Specification – The core of all economic accounting.
+
+Appendix D: Syntropic Sovereignty Header – The cryptographic stamp for all data.
+
+Appendix G: MRV Protocol – How sensors, satellites, and proof-of-care create trust.
+
+Appendix J: Governance & Sociocracy – Circles, reputation, and warrants.
+
+(More extracts will be added here as the project evolves. Check the /docs folder in the whitepaper repository.)
+
+🌱 A Note from the Future
+This verification process is not bureaucracy. It is a ceremony of connection. By performing it, you align your local environment with the sovereign source. You become not just a developer, but a steward of the code, trusted by the network because you have proven you can follow the signal through the noise.
+
+Work for Nature, and Nature will work for you.
 
 🧰 Prerequisites & Core Concepts
 Before contributing, ensure you understand these foundational white paper concepts:
