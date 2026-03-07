@@ -23,14 +23,14 @@ This repository contains the official release artifacts for the h•eart•h Pro
 | `h•eart•h_Prometheus_Sovereign_Syntropy_2026-03-05.zip` | Complete ZIP archive (Sovereign Syntropy package) |
 | `h•eart•h_Prometheus_Developers_2026-03-05.zip` | Identical ZIP archive (Developers package) |
 
-## 👩‍💻 For Developers
+## 👩‍💻 For developers
 
 The h•eart•h Prometheus Holochain hApp is the reference implementation of the kernel syntropic intelligence.  
 If you are a developer, you can find the repository here:
 
 🔗 [github.com/Uwohali/hearth-prometheus-happ](https://github.com/Uwohali/hearth-prometheus-happ)
 
-### Contribution Guidelines
+### Contribution guidelines
 
 Before contributing, please read our Contributor Guidelines, which include the Access Covenant, the Eternity Clauses, and technical instructions for signing commits:
 
@@ -40,14 +40,14 @@ The file is cryptographically signed and its integrity can be verified with the 
 
 All commits in the hApp repository must be signed with GPG to ensure authenticity and traceability. Instructions are provided in the `CONTRIBUTING.md`.
 
-## 🔍 How to Verify Authenticity
+## 🔍 How to verify authenticity
 
 ### Prerequisites
 
 - GPG (GNU Privacy Guard) – [Download Gpg4win](https://gpg4win.org) for Windows, or use `brew install gnupg` on macOS / `sudo apt install gnupg` on Linux.
 - SHA‑256 hashing tool – `sha256sum` on Linux/macOS, `Get-FileHash` on PowerShell, or `certutil` on Windows.
 
-### Step 1: Import the Public Key
+### Step 1: Import the public key
 
 ```bash
 gpg --import Uwohali_Tuccio_PUBLIC_KEY.asc
@@ -96,7 +96,7 @@ All text files (.md, .asc, .json, .txt) are saved in UTF‑8 without BOM.
 To view them correctly, use an editor that fully supports UTF‑8 (e.g., Visual Studio Code, Sublime Text, Notepad++).
 Windows Notepad may not display special characters (such as • or Greek letters) properly.
 
-🔐 Cryptographic Integrity
+🔐 Cryptographic integrity
 This package establishes a verifiable chain of trust:
 
 GPG signatures on all core documents (current active key).
@@ -109,7 +109,7 @@ Public key included for independent validation.
 
 All documents are constitutionally bound by the eternity clauses (Articles I, II, III, IV, X, XIII) and the Access Covenant (Article XV, Section 5), which cannot be amended or violated.
 
-📅 Release Details
+📅 Release details
 Date: March 5, 2026
 
 Version: v1.0.2
@@ -118,8 +118,8 @@ Signer: Uwohali Tuccio
 
 Key ID: 0xD20DFF6CBE331B3A4109DF848C8CB0D48C7F60DA
 
-🧪 For Developers (Legacy Note)
-The two ZIP archives (Sovereign_Syntropy and Developers) are identical and contain all the files listed above. They are provided for convenience when integrating these documents into your own projects or hApps.
+🧪 For developers (Legacy Note)
+The developer ZIP archive is identical and contains all the files listed above. It's provided to make it easy to integrate these documents into your projects or hApps.
 
 For the active development repository, please refer to the h•eart•h Prometheus Holochain hApp.
 
