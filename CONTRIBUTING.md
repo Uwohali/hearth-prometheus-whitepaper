@@ -161,7 +161,24 @@ The fight for open systems is the fight for a regenerative future. They are the 
 
 👉 **[Add the countdown banner to your site](https://keepandroidopen.org/#web-site-owners-show-your-support)** – it's a single `<script>` tag.
 
----
+## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
 🧰 Prerequisites & Core Concepts
 Before contributing, ensure you understand these foundational white paper concepts:
 
@@ -267,7 +284,25 @@ pub fn sign_covenant(covenant_hash: EntryHash) -> ExternResult<EntryHash> {
     
     let hash = create_entry(&EntryTypes::CovenantSignature(covenant))?;
     
-    // Create an anchor for quick lookup
+    // Create an anchor for qu## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+---ick lookup
     let path = Path::from(format!("covenant/{}", agent));
     path.ensure()?;
     create_link(path.path_entry_hash()?, hash, LinkTypes::Covenant, ())?;
@@ -360,7 +395,25 @@ pub fn request_meta_prompt(request: String) -> ExternResult<EntryHash> {
         structural_constraints: "".into(),
         method: "".into(),
         output_format: "".into(),
-        generated_at: sys_time()?,
+   ## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+---     generated_at: sys_time()?,
     };
     create_entry(&EntryTypes::MetaPrompt(meta))
 }
@@ -390,7 +443,25 @@ Credit marketplace for impact token exchange
 
 Wallet-as-history view (Section 11.5.2)
 
-AGI recommendation display with meta-prompt results
+AGI## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+--- recommendation display with meta-prompt results
 
 HSI data visualization (anonymized collective coherence)
 
@@ -407,7 +478,25 @@ White Paper Reference: Appendix I (REA/Valueflows DNA Specification)
 The REA (Resource-Event-Agent) ontology is the foundation for all value accounting. Every economic activity must be represented using these primitives.
 
 Core Data Structures
-📁 zomes/coordinator/rea_zome/src/lib.rs
+📁 ## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+---zomes/coordinator/rea_zome/src/lib.rs
 rust
 use hdk::prelude::*;
 
@@ -423,7 +512,25 @@ pub enum CapitalType {
 
 #[hdk_entry_helper]
 #[derive(Clone)]
-pub struct CapitalFlow {
+pub## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+--- struct CapitalFlow {
     pub provider: AgentPubKey,
     pub capital_type: CapitalType,
     pub amount: u64,
@@ -440,7 +547,25 @@ pub struct CapitalDistribution {
     pub holochain: u64,    // 30% to digital infrastructure
     pub ohe: u64,          // 30% to new OHEs
     pub infrastructure: u64, // 10% to development
-}
+}## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+---
 
 #[hdk_entry_helper]
 #[derive(Clone)]
@@ -463,7 +588,25 @@ pub enum ResourceType {
 
 #[hdk_entry_helper]
 #[derive(Clone)]
-pub struct Event {
+pub## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+--- struct Event {
     pub id: EntryHash,
     pub event_type: EventType,
     pub action: String, // "plant", "harvest", "pay", "certify"
@@ -477,7 +620,25 @@ pub struct Event {
     pub mrv_id: Option<EntryHash>, // Link to MRV evidence
     pub commitment_id: Option<EntryHash>,
     pub metadata: String,
-    pub header: String,
+   ## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
+
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+--- pub header: String,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -502,7 +663,25 @@ pub struct Commitment {
     pub status: CommitmentStatus,
     pub header: String,
 }
+## 🤝 A Human-Centered AI Future: The Pro-Human Declaration
 
+The technology we build must remain under human control. This is not just a technical preference—it is a fundamental principle of **Agent Sovereignty** (Article I).
+
+In March 2026, a remarkably broad coalition—including Nobel laureates, labor unions, faith leaders, and technologists—united behind **[The Pro-Human AI Declaration](https://humanstatement.org)**. Its core principles resonate deeply with our own:
+
+*   **Keeping Humans in Charge:** Human control is non-negotiable. AI must amplify, not replace, human potential.
+*   **Avoiding Concentration of Power:** We reject AI monopolies that stifle innovation and threaten democratic governance.
+*   **Protecting the Human Experience:** AI must not supplant family, community, and the foundational relationships that give life meaning.
+*   **Human Agency and Liberty:** AI must empower users, not enfeeble them. No AI personhood. Clear labeling. No deceptive identities.
+*   **Responsibility and Accountability:** Developers and deployers must be legally liable for harms caused by their systems.
+
+This is not a separate fight—it is the same struggle we encode into our zomes every day.
+
+👉 **[Read and endorse the Pro-Human AI Declaration](https://humanstatement.org)** – add your name to this global movement for accountable, human-centered AI.
+
+> *"Artificial intelligence should serve humanity, not the reverse."*
+
+---
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum CommitmentStatus {
     Active, Fulfilled, Expired, Cancelled,
