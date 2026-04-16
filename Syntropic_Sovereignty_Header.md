@@ -3,15 +3,17 @@
 ## Syntropic Sovereignty Header
 ### Protocol of sovereign data governance and constitutional privacy
 
-Version: 1.0  
-Date: March 5, 2026  
-Constitutional Reference: h•eart•h_Prometheus_White_Paper (March 5, 2026)  
+Version: 1.1  
+Date: March 13, 2026  
+Constitutional Reference: h•eart•h_Prometheus_White_Paper (March 13, 2026)  
 
 ## Preamble
 
 We, the undersigned, recognizing that privacy is not a mere technical option but the ontological foundation of dignity, autonomy, and justice—the very expression of the freedom to belong—establish this Syntropic Sovereignty Header as the supreme law of data governance within the h•eart•h Prometheus ecosystem.
 
 Traditional global consensus architectures (blockchains) are structurally incompatible with the right to be forgotten and the principle of data minimization due to their permanent immutability and replication across untrusted nodes. As demonstrated mathematically in the White Paper, they enforce scarcity and erode sovereignty. The h•eart•h Prometheus architecture, built upon agent‑centric principles, transcends these limitations by design.
+
+The Prometheus kernel acts as the constitutional core of the system, while its operational execution may be carried by peripheral agent infrastructures (such as the Claw ecosystem), which operate strictly under the sovereignty constraints encoded in this protocol. Within this architecture, execution agents operate not as autonomous authorities but as sovereign extensions of the constitutional kernel. Their role is to enact the system’s syntropic constraints in real environments, ensuring that data governance, ecological verification, and economic signaling remain aligned with the regenerative equilibrium principles defined in the White Paper.
 
 Through Article XI (Operational Syntropic Sovereignty) of the White Paper, we elevate data protection from passive compliance to the physical law of the system. This protocol codifies that law, embedding the eternity clauses (Articles I, II, III, IV, X, XIII) into the very fabric of our code. No application, algorithm, or agent may operate in derogation of it.
 
@@ -33,15 +35,19 @@ The principles of the h•eart•h intelligence manifesto and the foundational a
 
 ### 2.1 Agent‑centric mandate
 
-The use of immutable global ledger architectures (blockchain‑type DLT) for the storage of personal, biometric, or behavioral data is prohibited. The mandatory data layer is the individual Holochain source chain. Truth and consensus emerge from validated local interactions, not global consensus.
+The use of immutable global ledger architectures (blockchain-type DLT) for the storage of personal, biometric, or behavioral data is prohibited. The mandatory sovereign data layer is the individual Holochain source chain. Peripheral execution agents (including containerized or edge agents such as NanoClaw or PicoClaw) may process data locally but can never constitute the authoritative source of truth, which remains exclusively the constituent’s sovereign chain. These agents function strictly as execution environments. Validation authority remains rooted in the agent-centric constitutional layer, ensuring that distributed operations cannot override the syntropic equilibrium mechanisms governing value issuance and ecological verification.
 
 ### 2.2 Right to be forgotten by design
 
 Unlike blockchains, the source chain is under the exclusive cryptographic control of the constituent. The constituent has the physical and logical power to regenerate their source chain, ceasing the sharing of previous data with the DHT. This act constitutes the automated and verified fulfillment of Article 17 GDPR and analogous regulations globally.
 
-### 2.3 Zero‑knowledge as default
+## 2.3 Zero-knowledge as default
 
-No raw biometric data travels outside the sanctuary hardware (sovereign node). As defined by the Human State Interface (HSI) 1.0, the only interface toward the network consists of zero‑knowledge proofs or differentially private statistical aggregates. Violation triggers the tamper response protocol: module rejection, warrant issuance, and developer reputation decrement.
+No raw biometric data travels outside the sanctuary hardware (sovereign node). No biometric, behavioral, or personally identifiable raw data may be persisted, replicated, or historized outside the constituent’s sovereign node under any circumstance.
+
+As defined by the Human State Interface (HSI) 1.0, the only information that may be transmitted to the network consists of zero-knowledge proofs or differentially private statistical aggregates.
+
+Any violation triggers the tamper response protocol: module rejection, warrant issuance, and developer reputation decrement.
 
 ## Article 3: Compliance as Code
 
@@ -58,11 +64,11 @@ No raw biometric data travels outside the sanctuary hardware (sovereign node). A
 
 The system provides native compliance with GDPR, PIPEDA, LGPD, CCPA/CPRA, and APPI.
 
-## Article 4: Management of Interoperability (Gateway)
+## Article 4: Management of interoperability and edge execution (Gateway layer)
 
 ### 4.1 Universal local abstraction gateway
 
-Interfacing with external peripherals (BLE, ANT+, NFC, Zigbee, etc.) occurs exclusively through a local abstraction gateway residing in the constituent's sovereign node.
+Interfacing with external peripherals (BLE, ANT+, NFC, Zigbee, etc.) occurs exclusively through a local abstraction gateway residing in the constituent's sovereign node. The gateway may be implemented through sovereign sanctuary hardware or trusted edge agents operating under containerized isolation (e.g., NanoClaw-type environments).
 
 ### 4.2 Agnostic ingestion protocol
 
@@ -120,7 +126,7 @@ No structural modification to the code, update of algorithmic parameters, or rev
 
 ### 7.1 Bridge security
 
-When external tokens or data are bridged into the h•eart•h ecosystem, they must be wrapped with the syntropic sovereignty header. The bridge contract must enforce that no personal data from the source chain is carried across without explicit constituent consent.
+When external tokens, agents, or data are bridged into the h•eart•h ecosystem, they must be wrapped with the syntropic sovereignty header. The bridge contract must enforce that no personal data from the source chain is carried across without explicit constituent consent. Bridged systems must respect the syntropic equilibrium constraints defined by the Prometheus architecture, ensuring that external infrastructures cannot introduce extraction dynamics incompatible with regenerative balance. 
 
 ### 7.2 Ecological oracle validation
 
@@ -148,7 +154,7 @@ This protocol is governed by Lex informatica—self‑executing law encoded in t
 
 ## Enactment
 
-Enacted: March 5, 2026  
+Enacted: March 13, 2026  
 Verification suite: OpenPGP + SHA‑256  
 
 ---

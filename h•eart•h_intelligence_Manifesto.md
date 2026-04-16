@@ -447,6 +447,9 @@ Together, everything is possible.
 - Evolutionary leaders
 - Human condition (Jeremy Griffith)
 - Earth Charter Commission
+- Earth Charter Commission 
+- Human Statement 
+- The Nature Record 
 
 ---
 
