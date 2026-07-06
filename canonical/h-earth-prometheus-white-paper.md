@@ -31096,17 +31096,17 @@ Warning: 299 - "The endpoint /v1/example is deprecated. Please migrate to /v2/ex
 *• Mountain Time Farm. (2025). The economics of syntropic agroforestry  
 <https://mountaintimefarm.com/pages/the-economics-of-syntropic-agroforestry>*
 
-*→ Empirical basis for SRI (resilience), RPI (productivity), and CESI (cooperative ecological surplus)*
+*→ Prior for indicator design (SRI resilience, RPI productivity, CESI cooperative ecological surplus); Prometheus indices require pilot measurement and independent validation — this literature does not validate them*
 
 ***System-Level Productivity and Syntropic Performance Evidence***
 
-*• The Lancet Planetary Health (2025). Systematic review of syntropic agroforestry systems (67 empirical studies)*
+*• The Lancet Planetary Health (2025). Jacobi et al., a Personal View applying a PRISMA-based review of syntropic agroforestry systems (67 empirical studies); external Tier-2 evidence, not site validation*
 
 *Key synthesized findings:*
 
-*• In multiple cases, total system yields and total marketable outputs exceed comparator systems, confirming superiority at system level rather than single-crop metrics*
+*• In several cited cases, total system yields and total marketable outputs exceed comparator systems (supports system-level evaluation); productivity comparisons overall remain mixed and design-dependent, and single-crop yields can be lower*
 
-*• Land Equivalent Ratios (LER): 2.8–4.1, indicating significantly higher total value per unit land compared to monocultures*
+*• Land Equivalent Ratios (LER): 2.8–4.1 in the cited Bolivian cocoa-based comparisons (higher land-equivalent performance, subject to comparator, design and management boundary; not generalisable to all SFS)*
 
 *• System income increases: +33% to +200% relative to comparator cropping systems*
 
