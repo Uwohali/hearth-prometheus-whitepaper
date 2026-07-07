@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "mirror_repository": "Uwohali/hearth-prometheus-whitepaper",
+  "canonical_repository": "Permaculture-DAO/prometheus-canon",
+  "release_repository": "Permaculture-DAO/prometheus-canonical-releases",
+  "historical_canonical_root": "v1.1.2-genesis",
+  "candidate_activation_input": "v1.2.0-convergence-rc.2-or-later",
+  "source_commit": null,
+  "release_tag": null,
+  "release_manifest_sha256": null,
+  "signer_fingerprint": null,
+  "provenance_reference": null,
+  "verified_at_utc": null,
+  "verified_by": null,
+  "mirror_status": "STAGING_NOT_ACTIVATED"
+}

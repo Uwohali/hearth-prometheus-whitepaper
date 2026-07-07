@@ -1,21 +1,16 @@
-# No GPG Signatures Yet
+# No Canonical GPG Signatures Yet
 
-This repository is currently in the Prometheus v1.1 Genesis Institutional Canonical Line staging phase.
+This founder mirror is in `STAGING_NOT_ACTIVATED` state.
 
-Any `.sha256` files generated before final textual freeze are release-candidate or local staging integrity hashes only.
+Local or staging `.sha256` files are integrity aids only. They are not canonical signatures.
 
-They are not final canonical signatures.
+Canonical signatures and release assets must originate from `Permaculture-DAO/prometheus-canonical-releases` after:
 
-Final `SHA256_SUMS.txt`, individual `.sha256` files, detached `.asc` GPG signatures, and GitHub release assets must be regenerated only after:
+1. review and remediation;
+2. textual and artifact freeze;
+3. manifest generation;
+4. authorized signing;
+5. independent verification;
+6. release publication.
 
-1. final text review;
-2. Markdown completeness confirmation;
-3. repository-wide Markdown alignment;
-4. explicit update or deprecation of stale documents;
-5. textual freeze;
-6. checksum regeneration;
-7. local GPG signing with the authorized release key;
-8. release manifest update;
-9. GitHub release publication.
-
-No `.asc` signature should be treated as canonical unless generated after QA approval and signed with the authorized release key.
+The mirror must not create or publish a divergent signature set as though it were canonical.

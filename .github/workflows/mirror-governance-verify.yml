@@ -1,0 +1,77 @@
+name: mirror-governance-verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate governance files
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+
+          required = [
+              "README.md",
+              "MIRROR_SOURCE.json",
+              "STATUS.json",
+              "CLAIMS_BOUNDARY.md",
+              "MIRROR_SYNC_POLICY.md",
+              "MIRROR_REPRODUCIBILITY_AND_VERIFICATION.md",
+              "VERIFICATION.md",
+              "SECURITY.md",
+          ]
+          for name in required:
+              p = Path(name)
+              if not p.exists():
+                  raise SystemExit(f"missing required file: {name}")
+              p.read_text(encoding="utf-8")
+
+          source = json.loads(Path("MIRROR_SOURCE.json").read_text(encoding="utf-8"))
+          status = json.loads(Path("STATUS.json").read_text(encoding="utf-8"))
+
+          if source["mirror_status"] != "STAGING_NOT_ACTIVATED":
+              required_upstream = [
+                  "source_commit",
+                  "release_tag",
+                  "release_manifest_sha256",
+                  "signer_fingerprint",
+                  "verified_at_utc",
+                  "verified_by",
+              ]
+              missing = [k for k in required_upstream if not source.get(k)]
+              if missing:
+                  raise SystemExit(f"activated mirror has unresolved fields: {missing}")
+
+          if status["canonical_release_created_here"] is not False:
+              raise SystemExit("founder mirror cannot declare itself canonical release authority")
+
+          governance_text = "\n".join(
+              Path(p).read_text(encoding="utf-8")
+              for p in required
+              if p.endswith(".md")
+          ).lower()
+
+          forbidden = [
+              "scientifically proven platform",
+              "fully verified regenerative infrastructure",
+              "regulator approved",
+              "guaranteed ecological",
+              "guaranteed financial",
+              "guaranteed health",
+          ]
+          bad = [x for x in forbidden if x in governance_text]
+          if bad:
+              raise SystemExit(f"forbidden claims found: {bad}")
+
+          print("mirror governance verification passed")
+          PY

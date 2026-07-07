@@ -1,45 +1,32 @@
-# Verification
+# Founder Mirror Verification
 
-This document defines the RC2 verification workflow for the h•eart•h Prometheus canonical release candidate.
+## Scope
 
-## Verification scope
+Mirror verification covers:
 
-Verification covers:
+- upstream repository identity;
+- source commit SHA;
+- canonical release tag;
+- release manifest integrity;
+- asset SHA-256 integrity;
+- detached-signature verification;
+- signer fingerprint;
+- provenance or attestation evidence;
+- byte-for-byte comparison;
+- UTF-8 and line-ending normalization for mirror-authored governance files;
+- claims-boundary conformance;
+- status and exclusion accuracy.
 
-- SHA-256 integrity of release files;
-- UTF-8 encoding without BOM;
-- Unix LF line endings;
-- absence of CRLF drift;
-- Markdown table extraction completeness;
-- canonical ontology alignment checks;
-- placeholder classification as pre-signing fields.
+## Staging rule
 
-## Verify the package
+While `MIRROR_SOURCE.json` contains unresolved required fields, the mirror remains:
 
-```bash
-bash scripts/verify_release.sh
-```
+`STAGING_NOT_ACTIVATED`
 
-Expected result:
+Staging checksums are integrity aids only. They are not canonical signatures and do not establish scientific, legal, production or financial admission.
 
-```text
-SHA256 checks passed
-format checks passed
-canonical alignment checks passed
-markdown table completeness checks passed
-release verification passed
-```
+## Self-hash rule
 
-## Signature verification
+A document must not contain its own final hash inside the hashed body.
 
-Detached OpenPGP signatures are intentionally not authoritative until the final signed release.
-
-After final freeze and GPG signing:
-
-```bash
-bash scripts/verify_signatures.sh
-```
-
-## Self-hash trap rule
-
-The White Paper must not contain its own final hash inside the hashed body. Final hashes belong in external `.sha256`, `SHA256_SUMS.txt` and `RELEASE_MANIFEST.json` files.
+Hashes belong in external manifests and checksum files.
