@@ -1,28 +1,26 @@
-# Release Notes — v1.1.0-rc.2-strict
+# Founder Mirror Release and Candidate History
 
-## Status
+## Current mirror state
 
-`v1.1.0-rc.2-strict` is a text-complete and table-complete canonical/runtime synchronization candidate generated from the uploaded White Paper DOCX.
+`STAGING_NOT_ACTIVATED`
 
-This candidate is not the final signed public release. It is the strict QA candidate preceding final GPG signing.
+No signed canonical release is created by this repository.
 
-## Major changes from RC1
+## Historical candidate
 
-- Added table-complete Markdown extraction from the DOCX source of truth.
-- Preserved all DOCX tables as Markdown tables with table boundary comments.
-- Normalized Markdown heading structure.
-- Added repository-wide Markdown synchronization coverage for all current root `.md` files identified in the public repository and legacy canonical materials.
-- Added explicit deprecation and migration policy for stale or superseded documents.
-- Reclassified unresolved hash/signature/timestamp values as `PRE-SIGNING FIELD` values.
-- Regenerated SHA-256 checksums after text freeze candidate generation.
-- Deferred real GPG `.asc` signatures until final authorized signing after the WP v5 locked checksum-refresh gate.
+`v1.1.0-rc.2-strict` is retained as a historical text- and table-completeness candidate produced during the earlier Genesis synchronization work.
 
-## Notable ontology alignment
+It is **superseded as an activation candidate** and must not be represented as the current canonical release.
 
-This release aligns repository documentation to the institutional White Paper architecture:
+## Controlling baseline
 
-OHE → MRV → verified indicators → PRU → PRU maturity classification → RAP → legal/institutional wrapper → capital allocation → reinvestment → expanded regeneration.
+- Historical canonical root: `v1.1.2-genesis`
+- Future activation input: `v1.2.0-convergence-rc.2` or later, only after the required review, remediation, freeze, signing and independent verification gates.
 
-## Signing boundary
+## Release authority
 
-Final signatures must be generated only from the release maintainer environment after review.
+Canonical tags, manifests, checksums, detached signatures and release assets must originate from:
+
+`Permaculture-DAO/prometheus-canonical-releases`
+
+This mirror may reproduce those artifacts only after verification against the recorded source commit and release evidence.

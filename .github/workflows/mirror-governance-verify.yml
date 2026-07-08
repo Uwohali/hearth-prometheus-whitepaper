@@ -1,0 +1,306 @@
+name: mirror-governance-verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Validate staging governance and text safety
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          from pathlib import Path
+          from datetime import datetime
+          import json
+          import re
+
+          required_files = [
+              "README.md",
+              "MIRROR_SOURCE.json",
+              "STATUS.json",
+              "CLAIMS_BOUNDARY.md",
+              "MIRROR_SYNC_POLICY.md",
+              "MIRROR_REPRODUCIBILITY_AND_VERIFICATION.md",
+              "MIRROR_ACTIVATION_GATE.md",
+              "VERIFICATION.md",
+              "NO_GPG_SIGNATURES_YET.md",
+              "RELEASE_NOTES.md",
+              "REPRODUCIBLE_RELEASE.md",
+              "SECURITY.md",
+          ]
+
+          for name in required_files:
+              path = Path(name)
+              if not path.is_file():
+                  raise SystemExit(f"missing required file: {name}")
+              path.read_text(encoding="utf-8")
+
+          source = json.loads(
+              Path("MIRROR_SOURCE.json").read_text(encoding="utf-8")
+          )
+          status = json.loads(
+              Path("STATUS.json").read_text(encoding="utf-8")
+          )
+
+          expected_source = {
+              "schema_version": "1.0.0",
+              "mirror_repository": "Uwohali/hearth-prometheus-whitepaper",
+              "canonical_repository": "Permaculture-DAO/prometheus-canon",
+              "release_repository": "Permaculture-DAO/prometheus-canonical-releases",
+              "historical_canonical_root": "v1.1.2-genesis",
+              "candidate_activation_input": "v1.2.0-convergence-rc.2-or-later",
+              "mirror_status": "STAGING_NOT_ACTIVATED",
+          }
+
+          for key, expected in expected_source.items():
+              if source.get(key) != expected:
+                  raise SystemExit(
+                      f"MIRROR_SOURCE.json {key} must equal "
+                      f"{expected!r}; received {source.get(key)!r}"
+                  )
+
+          if status.get("schema_version") != "1.0.0":
+              raise SystemExit("STATUS.json schema_version must equal 1.0.0")
+          if status.get("repository_role") != "FOUNDER_PUBLICATION_MIRROR":
+              raise SystemExit(
+                  "STATUS.json repository_role must equal "
+                  "FOUNDER_PUBLICATION_MIRROR"
+              )
+          if status.get("status") != "STAGING_NOT_ACTIVATED":
+              raise SystemExit(
+                  "Non-staging status requires a separate independently "
+                  "verified activation workflow and is not admitted here."
+              )
+
+          boolean_fields = [
+              "canonical_release_created_here",
+              "signature_verified",
+              "source_commit_verified",
+              "byte_parity_verified",
+              "staging_checksums_current",
+              "scientific_validation_claimed",
+              "production_admission_claimed",
+              "legal_approval_claimed",
+              "financial_verification_claimed",
+              "pilot_completion_claimed",
+              "institutional_admission_claimed",
+          ]
+
+          for field in boolean_fields:
+              if type(status.get(field)) is not bool:
+                  raise SystemExit(
+                      f"STATUS.json field must be boolean: {field}"
+                  )
+
+          required_false = [
+              "canonical_release_created_here",
+              "signature_verified",
+              "source_commit_verified",
+              "byte_parity_verified",
+              "scientific_validation_claimed",
+              "production_admission_claimed",
+              "legal_approval_claimed",
+              "financial_verification_claimed",
+              "pilot_completion_claimed",
+              "institutional_admission_claimed",
+          ]
+
+          true_fields = [
+              field for field in required_false if status[field] is True
+          ]
+          if true_fields:
+              raise SystemExit(
+                  "staging state requires false fields: "
+                  + ", ".join(true_fields)
+              )
+
+          def valid_hex(value, lengths):
+              return (
+                  isinstance(value, str)
+                  and len(value) in lengths
+                  and re.fullmatch(r"[0-9a-fA-F]+", value) is not None
+              )
+
+          def valid_utc(value):
+              if not isinstance(value, str) or not value.endswith("Z"):
+                  return False
+              try:
+                  datetime.fromisoformat(value.replace("Z", "+00:00"))
+                  return True
+              except ValueError:
+                  return False
+
+          optional_checks = {
+              "source_commit": lambda value: valid_hex(value, {40, 64}),
+              "release_manifest_sha256": lambda value: valid_hex(value, {64}),
+              "signer_fingerprint": lambda value: valid_hex(value, {40, 64}),
+              "verified_at_utc": valid_utc,
+          }
+
+          for field, validator in optional_checks.items():
+              value = source.get(field)
+              if value is not None and not validator(value):
+                  raise SystemExit(f"invalid optional field: {field}")
+
+          status_review = status.get("last_status_review_utc")
+          if status_review is not None and not valid_utc(status_review):
+              raise SystemExit("invalid last_status_review_utc")
+
+          governed_extensions = {".md", ".json", ".yml", ".yaml", ".txt"}
+          governed_files = [
+              path for path in Path(".").rglob("*")
+              if path.is_file()
+              and ".git" not in path.parts
+              and path.suffix.lower() in governed_extensions
+          ]
+
+          bidi = re.compile(
+              "[\u200e\u200f\u202a-\u202e\u2066-\u2069]"
+          )
+          bidi_violations = []
+
+          for path in governed_files:
+              text = path.read_text(encoding="utf-8")
+              for match in bidi.finditer(text):
+                  bidi_violations.append(
+                      f"{path}: prohibited bidi control "
+                      f"U+{ord(match.group()):04X}"
+                  )
+
+          if bidi_violations:
+              raise SystemExit("\n".join(bidi_violations))
+
+          claim_scan_files = [
+              Path("README.md"),
+              Path("MIRROR_SYNC_POLICY.md"),
+              Path("MIRROR_REPRODUCIBILITY_AND_VERIFICATION.md"),
+              Path("MIRROR_ACTIVATION_GATE.md"),
+              Path("VERIFICATION.md"),
+              Path("NO_GPG_SIGNATURES_YET.md"),
+              Path("RELEASE_NOTES.md"),
+              Path("REPRODUCIBLE_RELEASE.md"),
+              Path("SECURITY.md"),
+          ]
+
+          forbidden_claims = [
+              "scientifically proven platform",
+              "fully verified regenerative infrastructure",
+              "production ready",
+              "production-ready",
+              "regulator approved",
+              "regulatory approved",
+              "institutionally admitted",
+              "investment grade",
+              "investment-grade",
+              "canonical release activated",
+              "independently replicated",
+              "guaranteed ecological outcome",
+              "guaranteed financial outcome",
+              "guaranteed health outcome",
+          ]
+
+          claim_violations = []
+          for path in claim_scan_files:
+              lowered = path.read_text(encoding="utf-8").lower()
+              for phrase in forbidden_claims:
+                  if phrase in lowered:
+                      claim_violations.append(
+                          f"{path}: prohibited claim: {phrase}"
+                      )
+
+          boundary = Path("CLAIMS_BOUNDARY.md").read_text(
+              encoding="utf-8"
+          ).lower()
+
+          required_boundary_terms = [
+              "fully verified regenerative infrastructure",
+              "scientifically proven platform",
+              "production ready",
+              "regulator approved",
+              "institutionally admitted",
+              "investment grade",
+              "guaranteed ecological, financial or health outcome",
+              "canonical release activated",
+              "independently replicated",
+          ]
+
+          missing_terms = [
+              term for term in required_boundary_terms
+              if term not in boundary
+          ]
+
+          if missing_terms:
+              claim_violations.append(
+                  "CLAIMS_BOUNDARY.md missing terms: "
+                  + ", ".join(missing_terms)
+              )
+
+          if claim_violations:
+              raise SystemExit("\n".join(claim_violations))
+
+          print("staging governance and text-safety verification passed")
+          PY
+
+      - name: Enforce fail-closed canonical freeze
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+          PUSH_HEAD_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            BASE_SHA="$PR_BASE_SHA"
+            HEAD_SHA="$PR_HEAD_SHA"
+          else
+            BASE_SHA="$PUSH_BEFORE_SHA"
+            HEAD_SHA="$PUSH_HEAD_SHA"
+
+            if [[ "$BASE_SHA" =~ ^0+$ ]]; then
+              BASE_SHA="$(git hash-object -t tree /dev/null)"
+            fi
+          fi
+
+          changed="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")"
+
+          prohibited="$(
+            printf '%s\n' "$changed" |
+              grep -E '^(canonical/|CANONICAL_ADMISSION\.json$)' || true
+          )"
+
+          if [[ -n "$prohibited" ]]; then
+            echo "Fail-closed staging gate rejected these paths:"
+            printf '%s\n' "$prohibited"
+            echo ""
+            echo "A separate reviewed activation workflow must first verify:"
+            echo "- authoritative source commit"
+            echo "- release manifest and asset hashes"
+            echo "- detached signatures against a pinned trust root"
+            echo "- provenance or attestation"
+            echo "- byte parity with the authoritative release"
+            exit 1
+          fi
+
+          if [[ -e CANONICAL_ADMISSION.json ]]; then
+            echo "CANONICAL_ADMISSION.json is prohibited while staging."
+            exit 1
+          fi
+
+          echo "Fail-closed canonical freeze passed."

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "repository_role": "FOUNDER_PUBLICATION_MIRROR",
+  "status": "STAGING_NOT_ACTIVATED",
+  "canonical_release_created_here": false,
+  "signature_verified": false,
+  "source_commit_verified": false,
+  "byte_parity_verified": false,
+  "staging_checksums_current": false,
+  "scientific_validation_claimed": false,
+  "production_admission_claimed": false,
+  "legal_approval_claimed": false,
+  "financial_verification_claimed": false,
+  "pilot_completion_claimed": false,
+  "institutional_admission_claimed": false,
+  "last_status_review_utc": null
+}

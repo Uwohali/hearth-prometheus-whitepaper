@@ -1,79 +1,44 @@
 # h•eart•h Prometheus — Founder Publication Mirror
 
-**Prometheus v1.1 — Genesis Institutional Canonical Line**
+This repository is the founder-facing publication mirror for h•eart•h Prometheus.
 
-This repository is the founder publication mirror for the h•eart•h Prometheus White Paper and related public-facing materials.
+## Authoritative sources
 
-The primary canonical source repository is:
+- **Semantic canon:** `Permaculture-DAO/prometheus-canon`
+- **Canonical release authority:** `Permaculture-DAO/prometheus-canonical-releases`
 
-**Permaculture-DAO/prometheus-canon**
+This repository does not supersede either authority. A mirrored artifact is admissible only when its source commit, release tag, manifest, checksums, signatures and provenance are recorded and verified.
 
-This repository may mirror canonical content, founder-facing publications, and public communication materials.
+## Current status
 
-It does not supersede the canonical source repository unless explicitly synchronized through the signed canonical release process.
+**STAGING — NOT ACTIVATED — NOT A SIGNED CANONICAL RELEASE**
 
-## Repository status
+Historical canonical root: `v1.1.2-genesis`.
 
-Current status:
+A future `v1.2.0-convergence-rc.2` or later artifact may be mirrored only after the applicable review, freeze, signing and independent verification gates have been completed.
 
-**Founder publication mirror — pre-final-freeze, pre-signing**
+## What Prometheus is
 
-This repository is not yet the final signed canonical release.
+Prometheus is a **verification-first regenerative infrastructure architecture** designed to produce reviewable, provenance-backed evidence.
 
-Final canonical checksums, detached GPG signatures, and GitHub release assets must be generated only after final QA, textual freeze, checksum regeneration, and authorized GPG signing in the canonical source repository.
+It is not described here as generally scientifically validated, production-admitted, legally approved, financially verified or activated beyond the explicit evidence published by the authoritative repositories.
 
-## Source of truth
+## Mirror content
 
-The source-of-truth document for the Genesis line is maintained in:
+- `canonical/` — staged founder-facing copies; not independently canonical.
+- `docs/` — publication and assurance notes.
+- `provenance/` — version-scoped source records.
+- `MIRROR_SOURCE.json` — machine-readable upstream reference.
+- `STATUS.json` — machine-readable status and claim boundary.
+- `CLAIMS_BOUNDARY.md` — prohibited and permitted public language.
+- `MIRROR_SYNC_POLICY.md` — admission and synchronization rules.
 
-**Permaculture-DAO/prometheus-canon**
+## Verification rule
 
-The mirrored source files staged here are:
+Canonical meaning lives in `Permaculture-DAO/prometheus-canon`.
 
-- `canonical/h-earth-prometheus-white-paper.docx`
-- `canonical/h-earth-prometheus-white-paper.md`
-- `canonical/h-earth-prometheus-white-paper.source.md`
+Canonical release authority lives in `Permaculture-DAO/prometheus-canonical-releases`.
 
-## Canonical boundary
+Founder publication lives here only after byte-level and provenance verification.
 
-Prometheus v1.1 defines Prometheus as verified regenerative infrastructure, not a public offering and not a token-first system.
-
-The operative ontology is:
-
-- OHE generates regenerative performance;
-- MRV and provenance make evidence reviewable;
-- PRU provides the value-analysis and maturity-classification interface;
-- RAP aggregates verified units into portfolio-grade regenerative infrastructure;
-- TRBK supports governance, coordination, access, or participation within legal boundaries;
-- HoloFuel supports operational transaction and infrastructure capacity;
-- any future financial or digital instrument requires a compliant legal wrapper, jurisdiction-specific review, disclosure, and investor-protection discipline.
-
-## Verification-first rule
-
-Prometheus follows this progression:
-
-claim → observation → evidence → provenance → integrity → verified indicator → admissibility → value
-
-No ecological claim, PRU maturity class, RAP inclusion, investor-facing interpretation, tokenized representation, or capital-facing statement should bypass evidence, provenance, confidence scoring, admissibility, governance review, and legal review.
-
-## Legacy boundary
-
-Pre-v1.1 repositories, releases, drafts, hashes, signatures, generated packs, runtime artifacts, and development materials are historical development artifacts.
-
-They are not part of the active canonical release path unless explicitly reintroduced through the v1.1 signed canonical release process.
-
-The previous pre-v1.1 repository has been moved to:
-
-**Uwohali/legacy-hearth-prometheus-whitepaper-pre-v1.1**
-
-## Operational rule
-
-Canonical meaning lives in:
-
-**Permaculture-DAO/prometheus-canon**
-
-Founder publication lives here.
-
-Runtime behavior lives in runtime repositories.
-
-Legacy material remains outside the active canonical path unless formally reintroduced.
+Legacy pre-v1.1 materials remain historical and non-controlling unless explicitly reintroduced through a reviewed canonical process.
